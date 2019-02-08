@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VBt-IH-s2g">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--How Many Fingers?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HowManyFinger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smg-7j-KkL">
+                                <rect key="frame" x="167.66666666666666" y="198" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H5y-F1-kFR"/>
+                                    <constraint firstAttribute="width" constant="40" id="pvk-qV-EFk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plaese Enter The Number Between 1 to 10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hof-BM-EPf">
+                                <rect key="frame" x="20" y="108" width="335" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="FZj-S6-mhw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeB-3M-uI3">
+                                <rect key="frame" x="147.66666666666666" y="258" width="80" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8tY-eo-WX5"/>
+                                    <constraint firstAttribute="width" constant="80" id="wNu-IV-mT4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.048771664499999999" green="0.59579455849999996" blue="0.750230968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitclicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6N-gv-md4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6W-9J-URG">
+                                <rect key="frame" x="87.666666666666686" y="608" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7Kd-Yo-leg"/>
+                                    <constraint firstAttribute="width" constant="200" id="Ygr-P6-jjQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGe-W3-78p">
+                                <rect key="frame" x="62.666666666666657" y="328" width="249.99999999999997" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1S5-UI-rQV"/>
+                                    <constraint firstAttribute="height" constant="250" id="EyI-W5-OMK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21797901391983032" green="0.71317780017852783" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hof-BM-EPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0dE-o9-PQN"/>
+                            <constraint firstItem="Smg-7j-KkL" firstAttribute="top" secondItem="Hof-BM-EPf" secondAttribute="bottom" constant="30" id="2qX-sx-xC1"/>
+                            <constraint firstItem="Hof-BM-EPf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="E5u-8H-SwI"/>
+                            <constraint firstItem="X6W-9J-URG" firstAttribute="top" secondItem="aGe-W3-78p" secondAttribute="bottom" constant="30" id="EXZ-ts-3uc"/>
+                            <constraint firstItem="aGe-W3-78p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GIh-cn-lP4"/>
+                            <constraint firstItem="X6W-9J-URG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gjb-Ea-rI7"/>
+                            <constraint firstItem="IeB-3M-uI3" firstAttribute="top" secondItem="Smg-7j-KkL" secondAttribute="bottom" constant="30" id="LUv-hr-bNN"/>
+                            <constraint firstItem="IeB-3M-uI3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZoG-SG-CTJ"/>
+                            <constraint firstItem="Hof-BM-EPf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aow-iQ-oG1"/>
+                            <constraint firstItem="Smg-7j-KkL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDD-aI-tae"/>
+                            <constraint firstAttribute="trailing" secondItem="Hof-BM-EPf" secondAttribute="trailing" constant="20" id="veL-Wd-0CH"/>
+                            <constraint firstItem="aGe-W3-78p" firstAttribute="top" secondItem="IeB-3M-uI3" secondAttribute="bottom" constant="30" id="wKM-NC-ytI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="How Many Fingers?" id="7CJ-IZ-QTz"/>
+                    <connections>
+                        <outlet property="ansLable" destination="X6W-9J-URG" id="beW-zV-MaZ"/>
+                        <outlet property="imageView" destination="aGe-W3-78p" id="RKa-oj-Ktg"/>
+                        <outlet property="numberOfFingers" destination="Smg-7j-KkL" id="AUr-Mp-Tis"/>
+                        <outlet property="submitButton" destination="IeB-3M-uI3" id="Swc-hE-jQK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1072.8" y="130.78817733990149"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UEc-z7-QSu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VBt-IH-s2g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fq0-XX-1EZ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.21797901391983032" green="0.71317780017852783" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aPK-gX-Zak"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ST-gJ-47f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="791.15442278860576"/>
         </scene>
     </scenes>
 </document>
